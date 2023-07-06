@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 
 const app = express();
@@ -13,6 +15,6 @@ app.get("/api/users", (req, res) => {
   res.status(200).json({ mssg: "Welcome to FitQuest API" });
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Listening on port 3000");
 });
