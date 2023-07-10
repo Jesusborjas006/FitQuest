@@ -1,9 +1,9 @@
 import Navbar from "../components/Navbar";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div className="home-page">
-      <Navbar />
+      <Navbar activeUser={props.activeUser}/>
     </div>
   );
 };

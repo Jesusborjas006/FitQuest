@@ -35,7 +35,7 @@ function App() {
             path="/login"
             element={<Login users={users} getActiveUser={getActiveUser} />}
           />
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={<Home activeUser={activeUser}/>} />
         </Routes>
       </div>
     </div>
