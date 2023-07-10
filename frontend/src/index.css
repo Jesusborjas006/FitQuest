@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+/* Welcome Page */
+
 /* Login Page */
 .login-page {
   height: 100vh;
@@ -34,3 +36,14 @@
 #user-img:hover {
   border: 5px solid #5cc159;
 }
+
+/* Navbar */
+.navbar {
+  background-color: #5cc159;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+/* Home Page */
