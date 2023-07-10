@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
+import User from "../components/User";
 
 const Login = () => {
   const [users, setUsers] = useState([]);
+
+  const userElemets = users.map((user) => (
+    <User id={user.id} name={user.name} img={user.image} key={user.id} />
+  ));
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -15,11 +20,7 @@ const Login = () => {
 
     fetchUsers();
   }, []);
-  return (
-    <div className="login-page">
-      <h2>Login page</h2>
-    </div>
-  );
+  return <div className="login-page">{users && userElemets}</div>;
 };
 
 export default Login;
