@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Welcome Page */
+
+/* Login Page */
+.login-page {
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-card {
+  text-align: center;
+  margin: 0 30px;
+}
+
+.user-name {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+#user-img {
+  border: 5px solid #fff;
+  width: 160px;
+  height: 160px;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+#user-img:hover {
+  border: 5px solid #5cc159;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #5cc159;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+}
+
+/* Home Page */
