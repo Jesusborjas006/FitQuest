@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 function App() {
   const [users, setUsers] = useState([]);
   const [activeUser, setActiveUser] = useState({});
-  console.log(activeUser);
 
   useEffect(() => {
     const fetchUsers = async () => {
