@@ -1,7 +1,6 @@
 import { Avatar } from "@mui/material";
 
 const Navbar = (props) => {
-  console.log(props)
   return (
     <nav className="navbar">
       <h1>FitQuest</h1>
