@@ -52,13 +52,13 @@
   height: 100vh;
 }
 
-.exercises-container {
+.muscles-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 5vh 0 0;
 }
 
-.exercise-card {
+.muscle-card {
   border: 2px solid #5cc159;
   padding: 16px;
   text-align: center;

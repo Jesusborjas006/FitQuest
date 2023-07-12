@@ -1,4 +1,4 @@
-const exercisesData = [
+const musclesData = [
   "Chest",
   "Shoulders",
   "Biceps",
@@ -13,4 +13,4 @@ const exercisesData = [
   "Abs",
 ];
 
-export default exercisesData;
+export default musclesData;
