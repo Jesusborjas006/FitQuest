@@ -9,6 +9,9 @@ function App() {
   const [users, setUsers] = useState([]);
   const [activeUser, setActiveUser] = useState({});
   const [activeMuscle, setActiveMuscle] = useState("");
+  const [exercises, setExercises] = useState([]);
+  const [filteredExercises, setFilteredExercises] = useState([]);
+  console.log("Filtered State: ", filteredExercises)
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -23,12 +26,25 @@ function App() {
     fetchUsers();
   }, []);
 
+  useEffect(() => {
+    fetch("http://localhost:4000/api/exercises")
+      .then((res) => res.json())
+      .then((data) => setExercises(data));
+  }, []);
+
   const getActiveUser = (id) => {
     setActiveUser(users[id - 1]);
   };
 
   const getActiveMuscle = (type) => {
-    setActiveMuscle(type)
+    setActiveMuscle(type);
+  };
+
+  const getFilteredExercises = (type) => {
+    const filteredData = exercises.filter(
+      (exercise) => exercise.primaryTarget === type
+    );
+    setFilteredExercises(filteredData)
   };
 
   return (
@@ -43,10 +59,17 @@ function App() {
           <Route
             path="/home"
             element={
-              <Home activeUser={activeUser} getActiveMuscle={getActiveMuscle} />
+              <Home
+                activeUser={activeUser}
+                getActiveMuscle={getActiveMuscle}
+                getFilteredExercises={getFilteredExercises}
+              />
             }
           />
-          <Route path="home/:workout" element={<Workouts activeMuscle={activeMuscle}/>} />
+          <Route
+            path="home/:workout"
+            element={<Workouts activeMuscle={activeMuscle} filteredExercises={filteredExercises}/>}
+          />
         </Routes>
       </div>
     </div>

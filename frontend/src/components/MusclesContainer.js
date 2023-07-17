@@ -1,11 +1,11 @@
 import { useState } from "react"
 import musclesData from "../musclesData"
-import Exercise from "./Muscle"
+import Muscle from "./Muscle"
 
-const ExercisesContainer = (props) => {
+const MusclesContainer = (props) => {
   const [muscles, setMuscles] = useState(musclesData)
 
-  const muscleElements = muscles.map(muscle => <Exercise name={muscle} key={muscle} getActiveMuscle={props.getActiveMuscle}/>)
+  const muscleElements = muscles.map(muscle => <Muscle name={muscle} key={muscle} getActiveMuscle={props.getActiveMuscle} getFilteredExercises={props.getFilteredExercises}/>)
   
   return (
     <div className="muscles-container">
@@ -14,4 +14,4 @@ const ExercisesContainer = (props) => {
   )
 }
 
-export default ExercisesContainer
+export default MusclesContainer
