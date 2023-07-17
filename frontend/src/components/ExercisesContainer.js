@@ -1,7 +1,6 @@
 import Exercise from "./Exercise";
 
 const ExercisesContainer = (props) => {
-  console.log(props.filteredExercises);
   const exerciseElements = props.filteredExercises.map((exercise) => (
     <Exercise
       name={exercise.name}

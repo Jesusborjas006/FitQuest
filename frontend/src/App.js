@@ -68,7 +68,7 @@ function App() {
           />
           <Route
             path="home/:workout"
-            element={<Workouts activeMuscle={activeMuscle} filteredExercises={filteredExercises}/>}
+            element={<Workouts activeMuscle={activeMuscle} filteredExercises={filteredExercises} activeUser={activeUser}/>}
           />
         </Routes>
       </div>
