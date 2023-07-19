@@ -5,7 +5,9 @@ const Muscle = (props) => {
     <div className="muscle-card">
       <Link
         to={`/${props.name}`}
-        onClick={() => props.getFilteredExercises(props.name.toLowerCase())}
+        onClick={() =>
+          props.getFilteredExercises(props.name.toLowerCase())
+        }
       >
         <h3>{props.name}</h3>
       </Link>

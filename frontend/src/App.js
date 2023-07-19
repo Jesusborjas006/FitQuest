@@ -12,7 +12,7 @@ function App() {
   const [activeMuscle, setActiveMuscle] = useState("");
   const [exercises, setExercises] = useState([]);
   const [filteredExercises, setFilteredExercises] = useState([]);
-  const [exerciseDetails, setExerciseDetails] = useState({})
+  const [exerciseDetails, setExerciseDetails] = useState({});
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -49,9 +49,9 @@ function App() {
   };
 
   const getExerciseDetails = (id) => {
-    const details = filteredExercises.find(exercise => exercise.id === id)
+    const details = filteredExercises.find((exercise) => exercise.id === id);
 
-    setExerciseDetails(details)
+    setExerciseDetails(details);
   };
 
   return (
@@ -86,7 +86,11 @@ function App() {
               />
             }
           />
-          <Route exact path="/:workout/:id" element={<Details exerciseDetails={exerciseDetails}/>} />
+          <Route
+            exact
+            path="/:workout/:id"
+            element={<Details exerciseDetails={exerciseDetails} />}
+          />
         </Routes>
       </div>
     </div>

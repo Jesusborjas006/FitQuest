@@ -7,6 +7,7 @@
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 /* Welcome Page */
@@ -85,31 +86,50 @@ a {
 
 /* Navbar */
 .navbar {
-  background-color: #5cc159;
+  background-color: rgb(183, 39, 39);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 40px;
+  padding: 10px 40px;
+  color: #f2f2f2;
+}
+
+.logo {
+  font-size: 1.7rem;
 }
 
 /* Home Page */
 .home-page {
-  border: 2px solid black;
   height: 100vh;
+}
+
+.home-heading {
+  text-align: center;
+  margin-top: 10vh;
+  font-size: 2.2rem;
 }
 
 .muscles-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 5vh 0 0;
+  grid-template-columns: repeat(3, 1fr);
+  width: 85%;
+  margin: 5vh auto 0;
 }
 
 .muscle-card {
-  border: 2px solid #5cc159;
-  padding: 16px;
+  background-color: rgb(183, 39, 39);
+  padding: 18px;
+  font-size: 18px;
   text-align: center;
   cursor: pointer;
-  margin: 10px;
+  margin: 16px;
+  transition: all ease-in-out 0.2s;
+}
+
+.muscle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.25) 0px 5px 10px;
 }
 
 /* Workouts Page */
