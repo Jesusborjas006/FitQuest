@@ -10,6 +10,7 @@ const ExercisesContainer = (props) => {
       secondaryTarget={exercise.secondaryTarget}
       id={exercise.id}
       key={exercise.id}
+      getExerciseDetails={props.getExerciseDetails}
     />
   ));
 

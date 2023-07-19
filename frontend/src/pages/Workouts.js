@@ -5,7 +5,7 @@ const Workouts = (props) => {
   return (
     <div className="workout-page">
       <Navbar activeUser={props.activeUser}/>
-      <ExercisesContainer filteredExercises={props.filteredExercises} />
+      <ExercisesContainer filteredExercises={props.filteredExercises} getExerciseDetails={props.getExerciseDetails}/>
     </div>
   );
 };

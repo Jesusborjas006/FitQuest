@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import { useState, useEffect } from "react";
 import Workouts from "./pages/Workouts";
+import Details from "./pages/Details";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -11,7 +12,7 @@ function App() {
   const [activeMuscle, setActiveMuscle] = useState("");
   const [exercises, setExercises] = useState([]);
   const [filteredExercises, setFilteredExercises] = useState([]);
-  console.log("Filtered State: ", filteredExercises)
+  const [exerciseDetails, setExerciseDetails] = useState({})
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -44,7 +45,13 @@ function App() {
     const filteredData = exercises.filter(
       (exercise) => exercise.primaryTarget === type
     );
-    setFilteredExercises(filteredData)
+    setFilteredExercises(filteredData);
+  };
+
+  const getExerciseDetails = (id) => {
+    const details = filteredExercises.find(exercise => exercise.id === id)
+
+    setExerciseDetails(details)
   };
 
   return (
@@ -57,6 +64,7 @@ function App() {
             element={<Login users={users} getActiveUser={getActiveUser} />}
           />
           <Route
+            exact
             path="/home"
             element={
               <Home
@@ -67,9 +75,18 @@ function App() {
             }
           />
           <Route
-            path="home/:workout"
-            element={<Workouts activeMuscle={activeMuscle} filteredExercises={filteredExercises} activeUser={activeUser}/>}
+            exact
+            path="/:workout"
+            element={
+              <Workouts
+                activeMuscle={activeMuscle}
+                filteredExercises={filteredExercises}
+                activeUser={activeUser}
+                getExerciseDetails={getExerciseDetails}
+              />
+            }
           />
+          <Route exact path="/:workout/:id" element={<Details exerciseDetails={exerciseDetails}/>} />
         </Routes>
       </div>
     </div>
