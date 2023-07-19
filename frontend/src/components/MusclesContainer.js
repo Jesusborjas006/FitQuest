@@ -4,12 +4,12 @@ import Muscle from "./Muscle";
 
 const MusclesContainer = (props) => {
   const [muscles, setMuscles] = useState(musclesData);
-  console.log(muscles);
 
   const muscleElements = muscles.map((muscle) => (
     <Muscle
       name={muscle.name}
       key={muscle.name}
+      img={muscle.img}
       getActiveMuscle={props.getActiveMuscle}
       getFilteredExercises={props.getFilteredExercises}
     />

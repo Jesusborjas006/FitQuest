@@ -99,37 +99,44 @@ a {
 }
 
 /* Home Page */
-.home-page {
-  height: 100vh;
-}
-
 .home-heading {
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 5vh;
   font-size: 2.2rem;
 }
 
 .muscles-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
   width: 85%;
   margin: 5vh auto 0;
 }
 
 .muscle-card {
   background-color: rgb(183, 39, 39);
-  padding: 18px;
-  font-size: 18px;
+  padding: 3px 3px 10px;
   text-align: center;
   cursor: pointer;
   margin: 16px;
   transition: all ease-in-out 0.2s;
+  width: 250px;
+  border-radius: 8px;
 }
 
 .muscle-card:hover {
   transform: translateY(-5px);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
     rgba(0, 0, 0, 0.25) 0px 5px 10px;
+}
+
+.muscle-img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.muscle-name {
+  margin: 8px 0 0;
 }
 
 /* Workouts Page */
