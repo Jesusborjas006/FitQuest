@@ -1,5 +1,4 @@
 const Details = (props) => {
-  console.log(props);
   return (
     <div className="details-page">
       <img src={props.exerciseDetails.image} alt={props.exerciseDetails.name} />
