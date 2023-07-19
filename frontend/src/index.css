@@ -65,3 +65,27 @@
   cursor: pointer;
   margin: 10px;
 }
+
+/* Workouts Page */
+.workout-page {
+  width: 100vw;
+  max-width: 100vw;
+}
+
+.exercises-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  margin-top: 5vh;
+}
+
+.exercise-card {
+  width: 340px;
+  margin: 2.5rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.316);
+  cursor: pointer;
+}
+
+.exercise-card-img {
+  width: 100%;
+}

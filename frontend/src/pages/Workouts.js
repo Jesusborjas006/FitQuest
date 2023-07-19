@@ -1,5 +1,13 @@
+import ExercisesContainer from "../components/ExercisesContainer";
+import Navbar from "../components/Navbar";
+
 const Workouts = (props) => {
-  return <h2>{props.activeMuscle} page</h2>;
+  return (
+    <div className="workout-page">
+      <Navbar activeUser={props.activeUser}/>
+      <ExercisesContainer filteredExercises={props.filteredExercises} getExerciseDetails={props.getExerciseDetails}/>
+    </div>
+  );
 };
 
 export default Workouts;
