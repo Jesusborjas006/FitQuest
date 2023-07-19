@@ -5,14 +5,9 @@ const User = (props) => {
   return (
     <div className="user-card">
       <Link to="/home">
-        <Avatar
-          id="user-img"
-          alt={props.name}
-          src={props.img}
-          onClick={() => props.getActiveUser(props.id)}
-        />
+        <img id="user-img" src={props.img} alt={props.name} />
+        <p className="user-name">{props.name}</p>
       </Link>
-      <p className="user-name">{props.name}</p>
     </div>
   );
 };
