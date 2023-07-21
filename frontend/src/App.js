@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import { useState, useEffect } from "react";
 import Workouts from "./pages/Workouts";
 import Details from "./pages/Details";
+import Favorites from "./pages/Favorites";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -13,6 +14,9 @@ function App() {
   const [exercises, setExercises] = useState([]);
   const [filteredExercises, setFilteredExercises] = useState([]);
   const [exerciseDetails, setExerciseDetails] = useState({});
+  const [favoritesExercises, setFavoriteExcercises] = useState([]);
+
+  console.log(favoritesExercises);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -54,6 +58,12 @@ function App() {
     setExerciseDetails(details);
   };
 
+  const addToFavorites = (newFavorite) => {
+    if (!favoritesExercises.includes(newFavorite)) {
+      setFavoriteExcercises([...favoritesExercises, newFavorite]);
+    }
+  };
+
   return (
     <div className="App">
       <div className="pages">
@@ -89,7 +99,24 @@ function App() {
           <Route
             exact
             path="/:workout/:id"
-            element={<Details exerciseDetails={exerciseDetails} activeUser={activeUser}/>}
+            element={
+              <Details
+                exerciseDetails={exerciseDetails}
+                activeUser={activeUser}
+                addToFavorites={addToFavorites}
+              />
+            }
+          />
+          <Route
+            exact
+            path="/favorites"
+            element={
+              <Favorites
+                activeUser={activeUser}
+                favoritesExercises={favoritesExercises}
+                getExerciseDetails={getExerciseDetails}
+              />
+            }
           />
         </Routes>
       </div>

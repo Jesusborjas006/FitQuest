@@ -1,12 +1,18 @@
 import Navbar from "../components/Navbar";
 
 const Details = (props) => {
-
+  console.log(props)
   return (
     <div className="details-page">
       <Navbar activeUser={props.activeUser} />
       <div className="details-container">
         <h2 className="details-heading">{props.exerciseDetails.name}</h2>
+        <button
+          className="favorite-btn"
+          onClick={() => props.addToFavorites(props.exerciseDetails)}
+        >
+          Favorite
+        </button>
         <img
           className="details-img"
           src={props.exerciseDetails.image}
@@ -18,9 +24,17 @@ const Details = (props) => {
             {props.exerciseDetails.instructions}
           </p>
           <div className="muscles-worked-container">
-            <p><strong>Muscles Worked</strong></p>
-            <p><strong>Primary</strong>: {props.exerciseDetails.primaryTarget.toUpperCase()}</p>
-            <p><strong>Secondary</strong>: {props.exerciseDetails.secondaryTarget.join(", ").toUpperCase()}</p>
+            <p>
+              <strong>Muscles Worked</strong>
+            </p>
+            <p>
+              <strong>Primary</strong>:{" "}
+              {props.exerciseDetails.primaryTarget.toUpperCase()}
+            </p>
+            <p>
+              <strong>Secondary</strong>:{" "}
+              {props.exerciseDetails.secondaryTarget.join(", ").toUpperCase()}
+            </p>
           </div>
         </div>
       </div>
