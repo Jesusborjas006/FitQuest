@@ -179,3 +179,48 @@ a {
   margin: 8px 0 0;
   text-align: center;
 }
+
+/* Details Page */
+.details-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-heading {
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 2.2rem;
+}
+
+.details-img {
+  width: 35%;
+  align-self: center;
+  margin-top: 5vh;
+}
+
+.details-text-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  margin: 7vh 0;
+}
+
+.instructions {
+  width: 320px;
+  line-height: 1.4;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: rgb(183, 39, 39);
+  color: #fff;
+}
+
+.muscles-worked-container {
+  padding: 16px;
+  width: 320px;
+  border-radius: 10px;
+  background-color: rgb(183, 39, 39);
+  color: #fff;
+  line-height: 2;
+}

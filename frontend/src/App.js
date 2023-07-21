@@ -89,7 +89,7 @@ function App() {
           <Route
             exact
             path="/:workout/:id"
-            element={<Details exerciseDetails={exerciseDetails} />}
+            element={<Details exerciseDetails={exerciseDetails} activeUser={activeUser}/>}
           />
         </Routes>
       </div>
