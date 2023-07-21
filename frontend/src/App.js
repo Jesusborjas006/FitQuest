@@ -14,6 +14,9 @@ function App() {
   const [exercises, setExercises] = useState([]);
   const [filteredExercises, setFilteredExercises] = useState([]);
   const [exerciseDetails, setExerciseDetails] = useState({});
+  const [favoritesExercises, setFavoriteExcercises] = useState([]);
+
+  console.log(favoritesExercises);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -55,6 +58,11 @@ function App() {
     setExerciseDetails(details);
   };
 
+  const addToFavorites = (newFavorite) => {
+    console.log("Cliked");
+    setFavoriteExcercises([...favoritesExercises, newFavorite])
+  };
+
   return (
     <div className="App">
       <div className="pages">
@@ -90,9 +98,19 @@ function App() {
           <Route
             exact
             path="/:workout/:id"
-            element={<Details exerciseDetails={exerciseDetails} activeUser={activeUser}/>}
+            element={
+              <Details
+                exerciseDetails={exerciseDetails}
+                activeUser={activeUser}
+                addToFavorites={addToFavorites}
+              />
+            }
           />
-          <Route exact path="/favorites" element={<Favorites />}/>
+          <Route
+            exact
+            path="/favorites"
+            element={<Favorites activeUser={activeUser} favoritesExercises={favoritesExercises}/>}
+          />
         </Routes>
       </div>
     </div>
