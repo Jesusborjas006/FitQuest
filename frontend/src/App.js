@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import { useState, useEffect } from "react";
 import Workouts from "./pages/Workouts";
 import Details from "./pages/Details";
+import Favorites from "./pages/Favorites";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -91,6 +92,7 @@ function App() {
             path="/:workout/:id"
             element={<Details exerciseDetails={exerciseDetails} activeUser={activeUser}/>}
           />
+          <Route exact path="/favorites" element={<Favorites />}/>
         </Routes>
       </div>
     </div>
