@@ -18,6 +18,13 @@ a {
   cursor: pointer;
 }
 
+.back-link {
+  color: #000;
+  margin: 3rem 0 0 3rem;
+  display: inline-block;
+  font-size: 22px;
+}
+
 /* Welcome Page */
 .welcome-page {
   height: 100vh;
