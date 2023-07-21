@@ -10,6 +10,14 @@ a {
   color: #fff;
 }
 
+.favorite-btn {
+  width: 120px;
+  margin: 3vh auto 0;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 /* Welcome Page */
 .welcome-page {
   height: 100vh;
@@ -178,6 +186,7 @@ a {
 .exercise-name {
   margin: 8px 0 0;
   text-align: center;
+  color: #fff;
 }
 
 /* Details Page */
@@ -223,4 +232,11 @@ a {
   background-color: rgb(183, 39, 39);
   color: #fff;
   line-height: 2;
+}
+
+/* Favorites Page */
+.favorites-heading {
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 2.2rem;
 }

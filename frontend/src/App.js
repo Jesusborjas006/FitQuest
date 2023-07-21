@@ -59,8 +59,9 @@ function App() {
   };
 
   const addToFavorites = (newFavorite) => {
-    console.log("Cliked");
-    setFavoriteExcercises([...favoritesExercises, newFavorite])
+    if (!favoritesExercises.includes(newFavorite)) {
+      setFavoriteExcercises([...favoritesExercises, newFavorite]);
+    }
   };
 
   return (
@@ -109,7 +110,13 @@ function App() {
           <Route
             exact
             path="/favorites"
-            element={<Favorites activeUser={activeUser} favoritesExercises={favoritesExercises}/>}
+            element={
+              <Favorites
+                activeUser={activeUser}
+                favoritesExercises={favoritesExercises}
+                getExerciseDetails={getExerciseDetails}
+              />
+            }
           />
         </Routes>
       </div>

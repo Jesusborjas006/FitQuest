@@ -8,6 +8,7 @@ const Details = (props) => {
       <div className="details-container">
         <h2 className="details-heading">{props.exerciseDetails.name}</h2>
         <button
+          className="favorite-btn"
           onClick={() => props.addToFavorites(props.exerciseDetails)}
         >
           Favorite
