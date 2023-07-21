@@ -2,90 +2,225 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
 /* Welcome Page */
+.welcome-page {
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome-text-container {
+  margin: 35vh 10vh;
+}
+
+.welcome-heading {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+}
+
+.welcome-p {
+  width: 90%;
+  line-height: 1.4;
+}
+
+.welcome-link {
+  background-color: rgb(183, 39, 39);
+  color: #fff;
+  padding: 10px 25px;
+  margin-top: 2.5vh;
+  display: inline-block;
+}
 
 /* Login Page */
 .login-page {
   height: 100vh;
   max-height: 100vh;
+}
+
+.login-heading {
+  text-align: center;
+  padding: 10vh;
+  font-size: 2.2rem;
+}
+
+.user-container {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .user-card {
   text-align: center;
   margin: 0 30px;
+  width: 320px;
+  background-color: rgb(183, 39, 39);
+  padding: 0 0 14px;
+  border-radius: 8px;
+  transition: all ease-in-out 0.2s;
 }
 
 .user-name {
   font-size: 18px;
-  margin-top: 5px;
+  margin-top: 10px;
+  color: #fff;
 }
 
 #user-img {
-  border: 5px solid #fff;
-  width: 160px;
-  height: 160px;
-  cursor: pointer;
-  transition: all ease-in-out 0.3s;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
 }
 
-#user-img:hover {
-  border: 5px solid #5cc159;
+.user-card:hover {
+  transform: translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.25) 0px 5px 10px;
 }
 
 /* Navbar */
 .navbar {
-  background-color: #5cc159;
+  background-color: rgb(183, 39, 39);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 40px;
+  padding: 10px 40px;
+  color: #f2f2f2;
+}
+
+.logo {
+  font-size: 1.7rem;
 }
 
 /* Home Page */
-.home-page {
-  border: 2px solid black;
-  height: 100vh;
+.home-heading {
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 2.2rem;
 }
 
 .muscles-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 5vh 0 0;
+  justify-items: center;
+  width: 85%;
+  margin: 5vh auto 0;
 }
 
 .muscle-card {
-  border: 2px solid #5cc159;
-  padding: 16px;
+  background-color: rgb(183, 39, 39);
+  padding: 3px 3px 10px;
   text-align: center;
   cursor: pointer;
-  margin: 10px;
+  margin: 16px;
+  transition: all ease-in-out 0.2s;
+  width: 250px;
+  border-radius: 8px;
+}
+
+.muscle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.25) 0px 5px 10px;
+}
+
+.muscle-img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.muscle-name {
+  margin: 8px 0 0;
 }
 
 /* Workouts Page */
-.workout-page {
-  width: 100vw;
-  max-width: 100vw;
+.workout-heading {
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 2.2rem;
 }
 
 .exercises-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  margin-top: 5vh;
+  width: 90%;
+  margin: 5vh auto 0;
 }
 
 .exercise-card {
-  width: 340px;
-  margin: 2.5rem 0;
-  border: 1px solid rgba(0, 0, 0, 0.316);
+  width: 300px;
+  margin: 16px;
   cursor: pointer;
+  background-color: rgb(183, 39, 39);
+  padding: 3px 3px 10px;
+  border-radius: 8px;
+  transition: all ease-in-out 0.2s;
+}
+
+.exercise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.25) 0px 5px 10px;
 }
 
 .exercise-card-img {
   width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.exercise-name {
+  margin: 8px 0 0;
+  text-align: center;
+}
+
+/* Details Page */
+.details-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-heading {
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 2.2rem;
+}
+
+.details-img {
+  width: 35%;
+  align-self: center;
+  margin-top: 5vh;
+}
+
+.details-text-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  margin: 7vh 0;
+}
+
+.instructions {
+  width: 320px;
+  line-height: 1.4;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: rgb(183, 39, 39);
+  color: #fff;
+}
+
+.muscles-worked-container {
+  padding: 16px;
+  width: 320px;
+  border-radius: 10px;
+  background-color: rgb(183, 39, 39);
+  color: #fff;
+  line-height: 2;
 }

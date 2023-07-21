@@ -4,10 +4,16 @@ const Muscle = (props) => {
   return (
     <div className="muscle-card">
       <Link
-        to={`/${props.name}`}
-        onClick={() => props.getFilteredExercises(props.name.toLowerCase())}
+        to={`/${props.name.toLowerCase()}`}
+        onClick={() =>
+          props.getFilteredExercises(
+            props.name.toLowerCase(),
+            props.getActiveMuscle(props.name)
+          )
+        }
       >
-        <h3>{props.name}</h3>
+        <img className="muscle-img" src={props.img} alt={props.name} />
+        <h3 className="muscle-name">{props.name}</h3>
       </Link>
     </div>
   );

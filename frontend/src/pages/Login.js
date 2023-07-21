@@ -11,7 +11,12 @@ const Login = (props) => {
     />
   ));
 
-  return <div className="login-page">{props.users && userElemets}</div>;
+  return (
+    <div className="login-page">
+      <h2 className="login-heading">Who's Training?</h2>
+      <div className="user-container">{props.users && userElemets}</div>
+    </div>
+  );
 };
 
 export default Login;
