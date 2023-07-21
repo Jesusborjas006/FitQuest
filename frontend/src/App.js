@@ -16,8 +16,6 @@ function App() {
   const [exerciseDetails, setExerciseDetails] = useState({});
   const [favoritesExercises, setFavoriteExcercises] = useState([]);
 
-  console.log(favoritesExercises);
-
   useEffect(() => {
     const fetchUsers = async () => {
       const response = await fetch("http://localhost:4000/api/users");

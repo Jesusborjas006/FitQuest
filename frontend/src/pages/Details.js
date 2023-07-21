@@ -1,11 +1,17 @@
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 const Details = (props) => {
-  console.log(props)
   return (
     <div className="details-page">
       <Navbar activeUser={props.activeUser} />
       <div className="details-container">
+        <Link
+          to={`/${props.exerciseDetails.primaryTarget}`}
+          className="back-link"
+        >
+          ⬅ Go Back
+        </Link>
         <h2 className="details-heading">{props.exerciseDetails.name}</h2>
         <button
           className="favorite-btn"

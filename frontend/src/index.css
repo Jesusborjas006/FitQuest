@@ -18,6 +18,13 @@ a {
   cursor: pointer;
 }
 
+.back-link {
+  color: #000;
+  margin: 3rem 0 0 3rem;
+  display: inline-block;
+  font-size: 22px;
+}
+
 /* Welcome Page */
 .welcome-page {
   height: 100vh;
@@ -104,6 +111,17 @@ a {
 
 .logo {
   font-size: 1.7rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.home-link,
+.favorites-link {
+  margin-right: 26px;
+  font-size: 18px;
 }
 
 /* Home Page */
