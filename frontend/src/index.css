@@ -106,6 +106,17 @@ a {
   font-size: 1.7rem;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.home-link,
+.favorites-link {
+  margin-right: 26px;
+  font-size: 18px;
+}
+
 /* Home Page */
 .home-heading {
   text-align: center;
