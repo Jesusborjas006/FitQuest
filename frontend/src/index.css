@@ -258,3 +258,243 @@ a {
   margin-top: 5vh;
   font-size: 2.2rem;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .welcome-page {
+    background: url("https://images.unsplash.com/photo-1616279969096-54b228f5f103?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80")
+      no-repeat center center/cover;
+  }
+
+  .welcome-text-container {
+    margin: 25vh 10vw 32vh 10vw;
+    background-color: #ffffffd1;
+    padding: 18px;
+  }
+
+  .welcome-heading {
+    font-size: 2.1rem;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .welcome-p {
+    width: 100%;
+    line-height: 1.2;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .welcome-link {
+    display: block;
+    text-align: center;
+  }
+
+  .welcome-img {
+    display: none;
+  }
+
+  .user-card {
+    margin: 0 8px;
+  }
+
+  .user-name {
+    font-size: 16px;
+  }
+
+  .home-heading {
+    font-size: 1.5rem;
+  }
+
+  .muscles-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+  }
+
+  .muscle-card {
+    width: 150px;
+  }
+
+  .muscle-name {
+    font-size: 16px;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .workout-heading {
+    font-size: 2rem;
+  }
+
+  .exercises-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .exercise-card {
+    width: 150px;
+  }
+
+  .exercise-name {
+    font-size: 15px;
+  }
+
+  .details-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .details-heading {
+    font-size: 1.8rem;
+  }
+
+  .details-img {
+    width: 75%;
+  }
+
+  .details-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .instructions {
+    width: 90%;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .muscles-worked-container {
+    width: 90%;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 960px) {
+  .welcome-page {
+    background: url("https://images.unsplash.com/photo-1616279969096-54b228f5f103?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80")
+      no-repeat center center/cover;
+  }
+
+  .welcome-text-container {
+    margin: 25vh auto 34vh;
+    background-color: #ffffffd1;
+    padding: 18px;
+    width: 450px;
+  }
+
+  .welcome-heading {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .welcome-p {
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .welcome-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    margin: 20px auto;
+  }
+
+  .welcome-img {
+    display: none;
+  }
+
+  .muscles-container {
+    grid-template-columns: repeat(3, 1fr);
+    width: 95%;
+  }
+
+  .muscle-card {
+    width: 160px;
+  }
+
+  .workout-heading {
+    font-size: 2.1rem;
+  }
+
+  .exercises-container {
+    grid-template-columns: repeat(3, 1fr);
+    width: 95%;
+  }
+
+  .exercise-card {
+    width: 160px;
+  }
+
+  .exercise-name {
+    font-size: 15px;
+  }
+
+  .details-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .details-heading {
+    font-size: 1.8rem;
+  }
+
+  .details-img {
+    width: 75%;
+  }
+
+  .details-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .instructions {
+    width: 90%;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .muscles-worked-container {
+    width: 90%;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1220px) {
+  .muscles-container {
+    grid-template-columns: repeat(4, 1fr);
+    width: 95%;
+  }
+
+  .muscle-card {
+    width: 180px;
+  }
+
+  .exercises-container {
+    grid-template-columns: repeat(4, 1fr);
+    width: 95%;
+  }
+
+  .exercise-card {
+    width: 190px;
+  }
+
+  .exercise-name {
+    font-size: 16px;
+  }
+}
