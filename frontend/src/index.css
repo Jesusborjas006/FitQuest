@@ -261,6 +261,9 @@ a {
 
 /* Media Queries */
 @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
   .welcome-page {
     background: url("https://images.unsplash.com/photo-1616279969096-54b228f5f103?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80")
       no-repeat center center/cover;
@@ -322,9 +325,25 @@ a {
   .navbar {
     padding: 10px;
   }
-  
+
   .logo {
     font-size: 1.4rem;
+  }
+
+  .workout-heading {
+    font-size: 2.0rem;
+  }
+
+  .exercises-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .exercise-card {
+    width: 150px;
+  }
+
+  .exercise-name {
+    font-size: 15px;
   }
 }
 
@@ -374,6 +393,23 @@ a {
   .muscle-card {
     width: 160px;
   }
+
+  .workout-heading {
+    font-size: 2.1rem;
+  }
+
+  .exercises-container {
+    grid-template-columns: repeat(3, 1fr);
+    width: 95%;
+  }
+
+  .exercise-card {
+    width: 160px;
+  }
+
+  .exercise-name {
+    font-size: 15px;
+  }
 }
 
 @media (min-width: 961px) and (max-width: 1220px) {
@@ -386,4 +422,16 @@ a {
     width: 180px;
   }
 
+  .exercises-container {
+    grid-template-columns: repeat(4, 1fr);
+    width: 95%;
+  }
+
+  .exercise-card {
+    width: 190px;
+  }
+
+  .exercise-name {
+    font-size: 16px;
+  }
 }
