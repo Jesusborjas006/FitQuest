@@ -14,7 +14,15 @@ const ExercisesContainer = (props) => {
     />
   ));
 
-  return <div className="exercises-container">{exerciseElements}</div>;
+  return (
+    <div className="exercises-container">
+      {props.filteredExercises.length ? (
+        exerciseElements
+      ) : (
+        <p className="no-data">No data found. Check back later!</p>
+      )}
+    </div>
+  );
 };
 
 export default ExercisesContainer;

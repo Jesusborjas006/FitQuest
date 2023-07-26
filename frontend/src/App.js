@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import Workouts from "./pages/Workouts";
 import Details from "./pages/Details";
 import Favorites from "./pages/Favorites";
+import usersTestData from "./usersTestData";
+import exercisesTestData from "./exercisesTestData";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -17,22 +19,24 @@ function App() {
   const [favoritesExercises, setFavoriteExcercises] = useState([]);
 
   useEffect(() => {
-    const fetchUsers = async () => {
-      const response = await fetch("http://localhost:4000/api/users");
-      const json = await response.json();
+    // const fetchUsers = async () => {
+    //   const response = await fetch("http://localhost:4000/api/users");
+    //   const json = await response.json();
 
-      if (response.ok) {
-        setUsers(json);
-      }
-    };
+    //   if (response.ok) {
+    //     setUsers(json);
+    //   }
+    // };
 
-    fetchUsers();
+    // fetchUsers();
+    setUsers(usersTestData)
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/exercises")
-      .then((res) => res.json())
-      .then((data) => setExercises(data));
+    // fetch("http://localhost:4000/api/exercises")
+    //   .then((res) => res.json())
+    //   .then((data) => setExercises(data));
+    setExercises(exercisesTestData)
   }, []);
 
   const getActiveUser = (id) => {
