@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# [FitQuest](https://fit-quest-demo.vercel.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract:
+This application is meant for user's to easily navigate between different exercises they can do at the gym. User's can select a user which is then taken to the home page that displays a set of mucle groups to target. Upon clicking a muscle, the user is then prompted with exercises that targets the muscle. Wehn an exercises is clicked, the user is then displayed a set of directions or more details about the exercise.
 
-## Available Scripts
+## Contributors:
+- Jesus Borjas [LinkedIn](https://www.linkedin.com/in/jesus-borjas-6589b920a/), [Github](https://github.com/jesusborjas006)
 
-In the project directory, you can run:
+## Installation Instructions:
+1. Fork and clone [this repo](https://github.com/Jesusborjas006/FitQuest).
+1. Copy the SSH key from the green "Code" button.
+1. In your terminal, use the command `git clone git@github.com:[https://github.com/Jesusborjas006/FitQuest]`.
+1. Run `npm install`.
+1. Do NOT run `npm audit fix --force` when prompted.
+1. Open the repo in your text editor to make any changes or inspect code.
+1. Run `npm start` in your terminal.
+1. Copy and paste the generated `localServer` address that your terminal provides into your browser address bar.
 
-### `npm start`
+## Preview of App:
+<img width="1508" alt="Screenshot 2023-07-25 at 9 18 57 PM" src="https://github.com/Jesusborjas006/FitQuest/assets/111095858/aee5785b-0da7-47da-b64c-4527340bef83">
+<img width="1508" alt="Screenshot 2023-07-25 at 9 18 37 PM" src="https://github.com/Jesusborjas006/FitQuest/assets/111095858/7769b345-8a35-411b-811c-cd0b53aae443">
+<img width="1508" alt="Screenshot 2023-07-25 at 9 19 21 PM" src="https://github.com/Jesusborjas006/FitQuest/assets/111095858/04f2de4f-d102-466c-a7ff-058476463db6">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used: 
+  - React 
+  - Router
+  - MaterialUI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Feature Ideas:
+  - Store user's max weight for each exercise.
