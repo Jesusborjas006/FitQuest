@@ -25,6 +25,9 @@ This application is meant for user's to easily navigate between different exerci
   - React 
   - Router
   - MaterialUI
+  - Node JS
+  - Express JS
+  - MongoDB
 
 ## Future Feature Ideas:
   - Store user's max weight for each exercise.
